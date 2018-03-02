@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-toolbar color="primary"></ion-toolbar>
+  <ion-toolbar color="primary">
 
   <ion-title>addItems</ion-title>
   <ion-buttons end>
@@ -21,11 +21,11 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Title</ion-label>
-      <ion-input type="text" [(ngModel)]="title">
+      <ion-input type="text" [(ngModel)]="title"></ion-input>
     </ion-item>
     <ion-item>
         <ion-label floating>Descripton</ion-label>
-        <ion-input type="text" [(ngModel)]="descrption">
+        <ion-input type="text" [(ngModel)]="descrption"></ion-input>
       </ion-item>
 </ion-list> 
 <button full ion-button color="primary" (click)="saveItem()">save</button>
