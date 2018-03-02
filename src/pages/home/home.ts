@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController,ModalController, Item } from 'ionic-angular';
+import { NavController,ModalController  } from 'ionic-angular';
 import { AddItemsPage } from '../add-items/add-items'
 
 @Component({
