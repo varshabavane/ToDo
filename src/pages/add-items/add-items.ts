@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ViewController, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the AddItemsPage page.
@@ -8,18 +8,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-add-items',
   templateUrl: 'add-items.html',
 })
 export class AddItemsPage {
+  title:string;
+  descrption:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public View: ViewController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddItemsPage');
+  saveItem() {
+  let newItem = {
+    title: this.title,
+    descrption: this.descrption
+  };
+  this.View.dismiss(newItem)
+  }
+
+  close(){
+    this.View.dismiss()
   }
 
 }
