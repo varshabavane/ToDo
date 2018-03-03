@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController,ModalController  } from 'ionic-angular';
 import { AddItemsPage } from '../add-items/add-items'
+import { ItemDetailsPage } from '../item-details/item-details'
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-items;
+items = [];
 
   constructor(public navCtrl: NavController,public modalCtrl:ModalController) {
 
@@ -16,6 +17,7 @@ items;
   addItem(){
     let addModal =this.modalCtrl.create(AddItemsPage);
     addModal.onDidDismiss((Item) =>  {
+      console.log(JSON.stringify(Item))
       if(Item){
         this.saveItem(Item);
       }
@@ -30,7 +32,9 @@ items;
 
 
   viewItem(item){
-    alert("this is your Item" + JSON.stringify(item))
+   this.navCtrl.push(ItemDetailsPage,{
+     item:item
+   });
   }
 
 }
