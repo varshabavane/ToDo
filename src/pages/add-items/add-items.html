@@ -13,15 +13,23 @@
 
 
 <ion-content>
+
   <ion-list>
+      <ion-item>
+          <ion-label floating>Date</ion-label>
+          <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="date"></ion-datetime>
+        </ion-item>
+    
     <ion-item>
       <ion-label floating>Title</ion-label>
       <ion-input type="text" [(ngModel)]="title"></ion-input>
     </ion-item>
+
     <ion-item>
         <ion-label floating>Descripton</ion-label>
         <ion-input type="text" [(ngModel)]="description"></ion-input>
       </ion-item>
+
 </ion-list> 
 <button full ion-button color="primary" (click)="saveItem()">save</button>
 
