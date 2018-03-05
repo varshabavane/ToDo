@@ -11,7 +11,12 @@ import {DataProvider} from '../../providers/data/data'
 export class HomePage {
   items = [];
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public data: DataProvider) {
+    this.data.getData().then((todos) => {
+      if(todos){
+        this.items = todos;
+      }
+    })
 
   }
 
@@ -29,6 +34,7 @@ export class HomePage {
 
   saveItem(item) {
     this.items.push(item)
+    this.data.save(this.items)
   }
 
 
