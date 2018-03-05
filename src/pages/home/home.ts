@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { AddItemsPage } from '../add-items/add-items'
 import { ItemDetailsPage } from '../item-details/item-details'
+import {DataProvider} from '../../providers/data/data'
 
 @Component({
   selector: 'page-home',
