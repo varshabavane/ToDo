@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { AddItemsPage } from '../add-items/add-items'
 import { ItemDetailsPage } from '../item-details/item-details'
-import {DataProvider} from '../../providers/data/data'
+import { DataProvider } from '../../providers/data/data'
 
 @Component({
   selector: 'page-home',
@@ -13,7 +13,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public modalCtrl: ModalController, public data: DataProvider) {
     this.data.getData().then((todos) => {
-      if(todos){
+      if (todos) {
         this.items = todos;
       }
     })
