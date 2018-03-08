@@ -77,7 +77,7 @@ export class HomePage {
     let toast = this.toastMsg.create({
       message: 'sliding email button work succesfully',
       duration: 3000,
-      position: 'middle'
+      position: 'top'
     });
     toast.present();
   }

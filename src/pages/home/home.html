@@ -19,22 +19,19 @@
   </ion-list> -->
 
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let item of items">
       <ion-item>
-        <h2>Slimer</h2>
+        <h2>{{item.title}}</h2>
+        <h6>{{item.date}}</h6>
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="primary" (click)="text()">
-          <ion-icon name="text"></ion-icon>
-          Text
+        <button ion-button color="secondary" (click)="text()">
+          <ion-icon name="glasses"></ion-icon>
+          view
         </button>
-        <button ion-button color="secondary" (click)="call()">
-          <ion-icon name="call"></ion-icon>
-          Call
-        </button>      
-        <button ion-button color="primary">
-          <ion-icon name="mail" (click)="mail()"></ion-icon>
-          Email
+        <button ion-button color="danger" (click)="call()">
+          <ion-icon name="trash"></ion-icon>
+          trash
         </button>
       </ion-item-options>
     </ion-item-sliding>
