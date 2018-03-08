@@ -55,15 +55,20 @@ export class HomePage {
 
 
   trash(item){
+    /* Removing item from array */
     this.items.splice(this.items.indexOf(item), 1)
+    /* Updating modified array in local storage */
+    this.data.save(this.items)
 
-    // let toast = this.toastMsg.create({
-    //   message: 'sliding call button work succesfully' + item.title + " "+ this.items.indexOf(item),
-    //   duration: 3000,
-    //   position: 'middle'
-    // });
-    // toast.present();
-
+    /* Toast message for item deleted successfully */
+    let toast = this.toastMsg.create({
+      message: 'Item deleted succesfully' + item.title,
+      duration: 3000,
+      position: 'middle',
+      cssClass: 'normalToast'
+    });
+    toast.present();
+    
   }
 
 
