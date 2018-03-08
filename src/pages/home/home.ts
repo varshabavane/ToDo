@@ -53,33 +53,18 @@ export class HomePage {
     });
   }
 
-  text() {
-    // alert('Hellow Workd')
-    let toast = this.toastMsg.create({
-      message: 'sliding text button work succesfully',
-      duration: 3000,
-      position: 'middle'
-    });
-    toast.present();
-  }
 
-  call(){
-    let toast = this.toastMsg.create({
-      message: 'sliding call button work succesfully',
-      duration: 3000,
-      position: 'middle'
-    });
-    toast.present();
+  trash(item){
+    this.items.splice(this.items.indexOf(item), 1)
+
+    // let toast = this.toastMsg.create({
+    //   message: 'sliding call button work succesfully' + item.title + " "+ this.items.indexOf(item),
+    //   duration: 3000,
+    //   position: 'middle'
+    // });
+    // toast.present();
 
   }
 
-  mail(){
-    let toast = this.toastMsg.create({
-      message: 'sliding email button work succesfully',
-      duration: 3000,
-      position: 'top'
-    });
-    toast.present();
-  }
 
 }

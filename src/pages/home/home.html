@@ -25,11 +25,11 @@
         <h6>{{item.date}}</h6>
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="secondary" (click)="text()">
+        <button ion-button color="secondary" (click)="viewItem(item)">
           <ion-icon name="glasses"></ion-icon>
           view
         </button>
-        <button ion-button color="danger" (click)="call()">
+        <button ion-button color="danger" (click)="trash(item)">
           <ion-icon name="trash"></ion-icon>
           trash
         </button>
