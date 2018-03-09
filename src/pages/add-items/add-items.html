@@ -28,11 +28,14 @@
       <ion-label floating style="color:blue">Descripton</ion-label>
       <ion-input type="text" [(ngModel)]="description"></ion-input>
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label floating style="color:rgb(6, 53, 53)">Time</ion-label>
       <ion-input type="time" [(ngModel)]="time"></ion-input>
+    </ion-item> -->
+    <ion-item>
+      <ion-label floating>Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time"></ion-datetime>
     </ion-item>
-
 
   </ion-list>
   <button full ion-button color="primary" (click)="saveItem()">save</button>
