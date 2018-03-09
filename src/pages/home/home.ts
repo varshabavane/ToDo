@@ -7,6 +7,8 @@ import { DataProvider } from '../../providers/data/data'
 /* Toast Message tst */
 import { ToastController } from 'ionic-angular';
 
+/* import for EditItem page */
+import {EditItemsPage} from '../edit-items/edit-items';
 
 @Component({
   selector: 'page-home',
@@ -72,15 +74,23 @@ export class HomePage {
   }
 
   edit(item){
-    let toast = this.toastMsg.create({
-      message: 'edit button worked succesfully' + item.title,
-      duration: 3000,
-      position: 'middle',
-      cssClass: 'normalToast'
-    });
-    toast.present();
+    // let toast = this.toastMsg.create({
+    //   message: 'edit button worked succesfully' + item.title,
+    //   duration: 3000,
+    //   position: 'middle',
+    //   cssClass: 'normalToast'
+    // });
+    // toast.present();
 
-    
+    let editModal = this.modalCtrl.create(EditItemsPage);
+    editModal.onDidDismiss((Item) => {
+
+      if (Item) {
+        this.saveItem(Item);
+      }
+
+    });
+    editModal.present();    
     
 
   }

@@ -10,13 +10,15 @@ import { AddItemsPage } from '../pages/add-items/add-items';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { DataProvider } from '../providers/data/data';
 import { IonicStorageModule } from '@ionic/storage';
+import { EditItemsPage } from '../pages/edit-items/edit-items';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     AddItemsPage,
-    ItemDetailsPage
+    ItemDetailsPage,
+    EditItemsPage
   ],
 
   imports: [
@@ -29,7 +31,8 @@ import { IonicStorageModule } from '@ionic/storage';
     MyApp,
     HomePage,
     AddItemsPage,
-    ItemDetailsPage
+    ItemDetailsPage,
+    EditItemsPage
   ],
   providers: [
     StatusBar,
