@@ -1,13 +1,12 @@
-
 <ion-header>
   <ion-toolbar color="primary">
 
-  <ion-title>addItems</ion-title>
-  <ion-buttons end>
-    <button ion-button icon-only (click)="close()">
-      <ion-icon name="close"></ion-icon>
-    </button>
-  </ion-buttons>
+    <ion-title>addItems</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -15,22 +14,27 @@
 <ion-content>
 
   <ion-list>
-      <ion-item>
-          <ion-label floating>Date</ion-label>
-          <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="date"></ion-datetime>
-        </ion-item>
-    
     <ion-item>
-      <ion-label floating>Title</ion-label>
+      <ion-label floating style="color:brown">Date</ion-label>
+      <ion-datetime displayFormat="D MMM YYYY" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating style="color:rgb(109, 75, 12)">Title</ion-label>
       <ion-input type="text" [(ngModel)]="title"></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-label floating>Descripton</ion-label>
-        <ion-input type="text" [(ngModel)]="description"></ion-input>
-      </ion-item>
+      <ion-label floating style="color:blue">Descripton</ion-label>
+      <ion-input type="text" [(ngModel)]="description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating style="color:rgb(6, 53, 53)">Time</ion-label>
+      <ion-input type="time" [(ngModel)]="time"></ion-input>
+    </ion-item>
 
-</ion-list> 
-<button full ion-button color="primary" (click)="saveItem()">save</button>
+
+  </ion-list>
+  <button full ion-button color="primary" (click)="saveItem()">save</button>
 
 </ion-content>

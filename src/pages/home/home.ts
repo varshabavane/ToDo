@@ -71,5 +71,19 @@ export class HomePage {
     
   }
 
+  edit(item){
+    let toast = this.toastMsg.create({
+      message: 'edit button worked succesfully' + item.title,
+      duration: 3000,
+      position: 'middle',
+      cssClass: 'normalToast'
+    });
+    toast.present();
+
+    
+    
+
+  }
+
 
 }

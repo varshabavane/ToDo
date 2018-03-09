@@ -21,20 +21,31 @@
   <ion-list>
     <ion-item-sliding *ngFor="let item of items">
       <ion-item>
-        <h2>{{item.title}}</h2>
+        <h1>{{item.title}}</h1>
         <h6>{{item.date}}</h6>
+        <h6>{{item.time}}</h6>
       </ion-item>
+
       <ion-item-options side="right">
         <button ion-button color="secondary" (click)="viewItem(item)">
           <ion-icon name="glasses"></ion-icon>
           view
         </button>
+
+
+        <button ion-button style="color:goldenrod" (click)="edit(item)">
+          <ion-icon name="create"></ion-icon>
+          Edit
+        </button>
+
+
         <button ion-button color="danger" (click)="trash(item)">
           <ion-icon name="trash"></ion-icon>
           trash
         </button>
+
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-  
+
 </ion-content>
